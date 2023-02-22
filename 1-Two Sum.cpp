@@ -4,15 +4,14 @@ public:
         vector<int> position;
 
         for(int i=0; i<nums.size()-1; i++){
-            int number = nums[i];
             for(int j=i+1; j<nums.size(); j++){
-                if(target == number + nums[j]){
+                if(target == nums[i] + nums[j]){
                 position.push_back(i);
                 position.push_back(j);
+                return position;
                 }
             }
         }
-
-        return position;
+        return null;
     }
 };
